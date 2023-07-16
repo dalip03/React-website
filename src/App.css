@@ -1,38 +1,183 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color:#183b56;
+  --secondary-text-color:#0e1013;
+  --accent-color:#2294ed;
+  --accent-color-dark:#1d69a3;
+  --pading-inline-section: 20px
+}
+
+body {
+  font-family: 'Poppins' , sans-serif;
+  color: var(--primary-text-color);
+}
+h1{
+  font-size: 3rem;
+}
+h2{
+  font-size: 2rem;
+}
+h3{
+  font-size: 1.5rem;
+}
+p{
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--secondary-text-color);
+  line-height: 1.8rem;
+
+}
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+.small-bold-text{
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* utility classes */
+
+
+.container{
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: var(--pading-inline-section);
+  overflow: hidden;
+}
+.top-banner{
+  background-image: url('./assets/asset\ 32.png');
+  background-size: 300px;
+  background-color: #4fb3d4;
+}
+
+.banner-text{
+  color:white;
+  padding: 15px 30px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ul{
+  list-style: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+.hover-links{
+  color: var(--primary-text-color);
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+.hover-links:hover{
+  color: rgb(37, 179, 236);
+}
+
+.primary-button{
+  background-color: var(--accent-color);
+  border-radius: 6px ;
+  border: .5px solid black;
+  font-weight: 700;
+  color: white !important;
+  padding: 12px 24px;
+  box-shadow: 0 0 2px rgb(130, 171, 197);
+  transition: 0.2s ease-out ;
+
+}
+.primary-button:hover{
+  background-color: var(--accent-color-dark);
+}
+.secondary-button{
+  border-radius: 6px ;
+  border: .5px solid black;
+  font-weight: 700;
+  color:var(--primary-text-color);
+  padding: 12px 24px;
+  transition: 0.2s ease-out ;
+}
+.secondary-button:hover {
+border-color: var(--accent-color);
+color: var(--accent-color) !important;
+}
+/* navbar */
+.main-nav{
+  margin-top: 20px;
+  justify-content: space-between;
+  position: relative; 
+}
+
+.company-logo img{
+  width:  200px;
+}
+.nav-links{
+  flex-basis: 730px;
+}
+  
+.nav-links ul{
+  justify-content: end;
+  gap: 40px;
+  list-style: none;
+}
+
+/* header section  */
+
+header{
+  padding: 50px var(--pading-inline-section);
+
+}
+.header-section {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 50px;
+}
+.header-left{
+  max-width: 40vw;
 }
 
-.App-link {
-  color: #61dafb;
+.header-right img{
+  width: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.get-started-btn{
+  margin-top: 20px;
+}
+
+.companies-header{
+  text-align: center;
+  margin-block: 30px;
+  color: var(--primary-text-color);
+}
+
+.logo{
+  justify-content: space-between;
+  height: 46px;
+}
+.nav-toggle{
+  display: none;
+}
+
+@media screen and (max-width:991px) {
+
+  .nav-toggle{
+    display: block;
+    margin-right: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links{
+    position: absolute;
+    background-color: white;
+    left: -100%;
+    top: 100%;
+    width: 100%;
+  }
+
+  .nav-links ul{
+    flex-direction: column;
+  }
+  .main-nav{
+    overflow: initial;
   }
 }
