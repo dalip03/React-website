@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import logo from "";
-// import img1 from "./"
+import logo from '../assets/images/a40.jpg';
 
 function Home() {
 
